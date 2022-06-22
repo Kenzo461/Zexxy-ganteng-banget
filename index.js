@@ -7,6 +7,14 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+console.log(`${chalk.white(`
+1 Push Trophy
+3 Push Crown
+Choose to use the available number`)} 
+`);
+const round = rs.question(`[+] Select Number  : `);
+    console.log('');
+
 const GoStumble = (auth) => new Promise((resolve, reject) => {
 
   fetch('http://kitkabackend.eastus.cloudapp.azure.com:5010/round/finishv2/'+round, {
